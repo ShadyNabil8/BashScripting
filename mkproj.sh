@@ -12,6 +12,11 @@ else
         touch .gitignore
         # Create a new repository on GitHub
         USERNAME="ShadyNabil8"
+        ###########################################
+        ###########################################
+        ############## ADD YOUR TOKEN #############
+        ###########################################
+        ###########################################
         TOKEN=""
         REPO_NAME=$1
         curl -H "Authorization: token $TOKEN" https://api.github.com/user/repos -d '{"name":"'$REPO_NAME'"}'

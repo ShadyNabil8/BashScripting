@@ -202,3 +202,68 @@ for arg in $@; do
     echo "$arg"
 done
 ```
+
+## Arrays
+
+```bash
+array=("shady" "nabil" "mohamed")
+# Print array elements
+echo ${array[@]}
+# Print the number of elements in the array
+echo ${#array[@]}
+# the array here is 1-based
+subArray=(${array[@]:1:2})
+echo ${subArray[@]}
+```
+
+## strings VS Arrays
+
+```bash
+# Strings are zero based.
+nmStr="Shady Nabil Mohamed"
+# 5 is the number of chars wanted to be printed
+sbStr=${nmStr:6:5}
+echo ${sbStr}
+```
+
+## select
+
+```bash
+select lang in cpp python java result
+do
+    echo $lang
+    case $lang in
+    "cpp")
+        echo "Good choise"
+        ;;
+    *)
+        break
+        ;;
+    esac
+done
+```
+
+## readonly with vars and functions
+
+```bash
+x=10
+echo $x
+x=20
+echo $x
+# readonly x
+x=30 # Error
+
+fun()
+{
+    echo "First call"
+}
+
+fun
+readonly -f fun # Error
+fun()
+{
+    echo "second call"
+}
+
+fun
+```
