@@ -1,4 +1,4 @@
-#~/bin/bash
+#!/bin/bash
 
 ###################################
 # echo "Enter your name"
@@ -175,26 +175,26 @@
 ###################################
 
 ###################################
-x=10
-echo $x
-x=20
-echo $x
-# readonly x
-x=30 # Error
+# x=10
+# echo $x
+# x=20
+# echo $x
+# # readonly x
+# x=30 # Error
 
-fun()
-{
-    echo "First call"
-}
+# fun()
+# {
+#     echo "First call"
+# }
 
-fun
-readonly -f fun # Error
-fun()
-{
-    echo "second call"
-}
+# fun
+# readonly -f fun # Error
+# fun()
+# {
+#     echo "second call"
+# }
 
-fun
+# fun
 ###################################
 ###################################
 ###################################
